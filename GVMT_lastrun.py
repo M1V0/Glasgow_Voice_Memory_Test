@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Wed  3 Sep 14:36:16 2025
+    on Wed  3 Sep 15:54:07 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -325,6 +325,66 @@ def setupDevices(expInfo, thisExp, win):
             deviceClass='keyboard',
             deviceName='vt_key',
         )
+    # create speaker 'bm_sound_1'
+    deviceManager.addDevice(
+        deviceName='bm_sound_1',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'bm_sound_2'
+    deviceManager.addDevice(
+        deviceName='bm_sound_2',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'bm_sound_3'
+    deviceManager.addDevice(
+        deviceName='bm_sound_3',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'bm_sound_4'
+    deviceManager.addDevice(
+        deviceName='bm_sound_4',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'bm_sound_5'
+    deviceManager.addDevice(
+        deviceName='bm_sound_5',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'bm_sound_6'
+    deviceManager.addDevice(
+        deviceName='bm_sound_6',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'bm_sound_7'
+    deviceManager.addDevice(
+        deviceName='bm_sound_7',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'bm_sound_8'
+    deviceManager.addDevice(
+        deviceName='bm_sound_8',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'bt_sound'
+    deviceManager.addDevice(
+        deviceName='bt_sound',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    if deviceManager.getDevice('bt_key') is None:
+        # initialise bt_key
+        bt_key = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='bt_key',
+        )
     # return True if completed successfully
     return True
 
@@ -451,6 +511,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=-1
     )
     int_btn.buttonClock = core.Clock()
+    # Run 'Begin Experiment' code from code_8
+    debug = False
     
     # --- Initialize components for Routine "sound_test" ---
     st_text = visual.TextStim(win=win, name='st_text',
@@ -630,7 +692,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "voice_task" ---
     vt_text = visual.TextStim(win=win, name='vt_text',
-        text='Is this Voice OLD or NEW?\n\nPress \'z\' for OLD\nPress \'m\' for NEW"',
+        text="Is this Voice OLD or NEW?\n\nPress 'z' for OLD\nPress 'm' for NEW",
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -676,15 +738,204 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     )
     vf_btn.buttonClock = core.Clock()
     
-    # --- Initialize components for Routine "bells_instructions" ---
-    
     # --- Initialize components for Routine "bells_memorisation" ---
+    bm_text = visual.TextStim(win=win, name='bm_text',
+        text=None,
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    bm_btn = visual.ButtonStim(win, 
+        text=None, font='Arvo',
+        pos=(0, -0.4),
+        letterHeight=0.03,
+        size=(0.25, 0.1), 
+        ori=0.0
+        ,borderWidth=0.0,
+        fillColor='darkgrey', borderColor=None,
+        color='white', colorSpace='rgb',
+        opacity=None,
+        bold=True, italic=False,
+        padding=None,
+        anchor='center',
+        name='bm_btn',
+        depth=-2
+    )
+    bm_btn.buttonClock = core.Clock()
+    bm_sound_1 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='bm_sound_1',    name='bm_sound_1'
+    )
+    bm_sound_1.setVolume(1.0)
+    bm_sound_2 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='bm_sound_2',    name='bm_sound_2'
+    )
+    bm_sound_2.setVolume(1.0)
+    bm_sound_3 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='bm_sound_3',    name='bm_sound_3'
+    )
+    bm_sound_3.setVolume(1.0)
+    bm_sound_4 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='bm_sound_4',    name='bm_sound_4'
+    )
+    bm_sound_4.setVolume(1.0)
+    bm_sound_5 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='bm_sound_5',    name='bm_sound_5'
+    )
+    bm_sound_5.setVolume(1.0)
+    bm_sound_6 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='bm_sound_6',    name='bm_sound_6'
+    )
+    bm_sound_6.setVolume(1.0)
+    bm_sound_7 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='bm_sound_7',    name='bm_sound_7'
+    )
+    bm_sound_7.setVolume(1.0)
+    bm_sound_8 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='bm_sound_8',    name='bm_sound_8'
+    )
+    bm_sound_8.setVolume(1.0)
+    
+    # --- Initialize components for Routine "bells_task_intro" ---
+    bti_text = visual.TextStim(win=win, name='bti_text',
+        text='Testing instruction\n\nDuring the testing phase, you will listen to "Bell" sounds that are either OLD (sounds that were presented during the familiarization phase) or NEW (sounds that were presented NOT during the familiarization phase).\n\nAfter the playback of a sound press:\n- Press \'z\' if you think this was an OLD sound\n- Press \'m\' if you think this was a NEW sound',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    bti_btn = visual.ButtonStim(win, 
+        text='Next', font='Arvo',
+        pos=(0, -0.4),
+        letterHeight=0.03,
+        size=(0.25, 0.1), 
+        ori=0.0
+        ,borderWidth=0.0,
+        fillColor='darkgrey', borderColor=None,
+        color='white', colorSpace='rgb',
+        opacity=None,
+        bold=True, italic=False,
+        padding=None,
+        anchor='center',
+        name='bti_btn',
+        depth=-1
+    )
+    bti_btn.buttonClock = core.Clock()
+    
+    # --- Initialize components for Routine "bells_task_load" ---
+    btl_text = visual.TextStim(win=win, name='btl_text',
+        text='Loading...',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.03, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
     
     # --- Initialize components for Routine "bells_task" ---
+    bt_text = visual.TextStim(win=win, name='bt_text',
+        text="Is this Bell OLD or NEW?\n\nPress 'z' for OLD\nPress 'm' for NEW",
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    # Run 'Begin Experiment' code from code_6
+    # Initialize counters
+    totalTrials = 0
+    totalCorrect = 0
+    bt_sound = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='bt_sound',    name='bt_sound'
+    )
+    bt_sound.setVolume(1.0)
+    bt_key = keyboard.Keyboard(deviceName='bt_key')
     
     # --- Initialize components for Routine "bells_feedback" ---
+    bf_text = visual.TextStim(win=win, name='bf_text',
+        text=None,
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    bf_btn = visual.ButtonStim(win, 
+        text='Next', font='Arvo',
+        pos=(0, -0.4),
+        letterHeight=0.03,
+        size=(0.25, 0.1), 
+        ori=0.0
+        ,borderWidth=0.0,
+        fillColor='darkgrey', borderColor=None,
+        color='white', colorSpace='rgb',
+        opacity=None,
+        bold=True, italic=False,
+        padding=None,
+        anchor='center',
+        name='bf_btn',
+        depth=-2
+    )
+    bf_btn.buttonClock = core.Clock()
     
     # --- Initialize components for Routine "finish" ---
+    fin_text = visual.TextStim(win=win, name='fin_text',
+        text='End of task\n\nThe task is over, thank you for your participation!',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    fin_btn = visual.ButtonStim(win, 
+        text='Finish', font='Arvo',
+        pos=(0, -0.4),
+        letterHeight=0.03,
+        size=(0.25, 0.1), 
+        ori=0.0
+        ,borderWidth=0.0,
+        fillColor='darkgrey', borderColor=None,
+        color='white', colorSpace='rgb',
+        opacity=None,
+        bold=True, italic=False,
+        padding=None,
+        anchor='center',
+        name='fin_btn',
+        depth=-1
+    )
+    fin_btn.buttonClock = core.Clock()
     
     # create some handy timers
     
@@ -888,6 +1139,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     sound_test.status = STARTED
     thisExp.addData('sound_test.started', sound_test.tStart)
     sound_test.maxDuration = None
+    # skip Routine sound_test if its 'Skip if' condition is True
+    sound_test.skipped = continueRoutine and not (debug)
+    continueRoutine = sound_test.skipped
     # keep track of which components have finished
     sound_testComponents = sound_test.components
     for thisComponent in sound_test.components:
@@ -1129,30 +1383,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = False
         
         if vm_playSound == 1:
-            for _ in range(3):
-                vm_sound_1.play()
-                core.wait(vm_sound_1.getDuration() + 0.1)
-            for _ in range(3):
-                vm_sound_2.play()
-                core.wait(vm_sound_1.getDuration() + 0.1)
-            for _ in range(3):
-                vm_sound_3.play()
-                core.wait(vm_sound_1.getDuration() + 0.1)
-            for _ in range(3):
-                vm_sound_4.play()
-                core.wait(vm_sound_1.getDuration() + 0.1)
-            for _ in range(3):
-                vm_sound_5.play()
-                core.wait(vm_sound_1.getDuration() + 0.1)
-            for _ in range(3):
-                vm_sound_6.play()
-                core.wait(vm_sound_1.getDuration() + 0.1)
-            for _ in range(3):
-                vm_sound_7.play()
-                core.wait(vm_sound_1.getDuration() + 0.1)
-            for _ in range(3):
-                vm_sound_8.play()
-                core.wait(vm_sound_1.getDuration() + 0.1)  
+            for snd in [vm_sound_1, vm_sound_2, vm_sound_3, vm_sound_4,
+                        vm_sound_5, vm_sound_6, vm_sound_7, vm_sound_8]:
+                for _ in range(3):
+                    snd.play()
+                    core.wait(snd.getDuration() + 0.1)
             continueRoutine = False
         # reset vm_btn to account for continued clicks & clear times on/off
         vm_btn.reset()
@@ -1186,6 +1421,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         voice_memorisation.status = STARTED
         thisExp.addData('voice_memorisation.started', voice_memorisation.tStart)
         voice_memorisation.maxDuration = None
+        # skip Routine voice_memorisation if its 'Skip if' condition is True
+        voice_memorisation.skipped = continueRoutine and not (debug)
+        continueRoutine = voice_memorisation.skipped
         # keep track of which components have finished
         voice_memorisationComponents = voice_memorisation.components
         for thisComponent in voice_memorisation.components:
@@ -1466,6 +1704,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     voice_task_intro.status = STARTED
     thisExp.addData('voice_task_intro.started', voice_task_intro.tStart)
     voice_task_intro.maxDuration = None
+    # skip Routine voice_task_intro if its 'Skip if' condition is True
+    voice_task_intro.skipped = continueRoutine and not (debug)
+    continueRoutine = voice_task_intro.skipped
     # keep track of which components have finished
     voice_task_introComponents = voice_task_intro.components
     for thisComponent in voice_task_intro.components:
@@ -1643,6 +1884,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         voice_task_load.status = STARTED
         thisExp.addData('voice_task_load.started', voice_task_load.tStart)
         voice_task_load.maxDuration = None
+        # skip Routine voice_task_load if its 'Skip if' condition is True
+        voice_task_load.skipped = continueRoutine and not (debug)
+        continueRoutine = voice_task_load.skipped
         # keep track of which components have finished
         voice_task_loadComponents = voice_task_load.components
         for thisComponent in voice_task_load.components:
@@ -1777,6 +2021,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         voice_task.status = STARTED
         thisExp.addData('voice_task.started', voice_task.tStart)
         voice_task.maxDuration = None
+        # skip Routine voice_task if its 'Skip if' condition is True
+        voice_task.skipped = continueRoutine and not (debug)
+        continueRoutine = voice_task.skipped
         # keep track of which components have finished
         voice_taskComponents = voice_task.components
         for thisComponent in voice_task.components:
@@ -1855,7 +2102,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             waitOnFlip = False
             
             # if vt_key is starting this frame...
-            if vt_key.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            if vt_key.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
                 vt_key.frameNStart = frameN  # exact frame index
                 vt_key.tStart = t  # local t and not account for scr refresh
@@ -1922,12 +2169,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Check response from Keyboard component
         if vt_key.keys:  # participant pressed a key
             respKey = vt_key.keys[0]  # first key pressed
-            print(respKey)
-            if (respKey == 'z' and vti_type == 'old') or (respKey == 'm' and vti_type == 'new'):
+            if (respKey == 'z' and vt_type == 'old') or (respKey == 'm' and vt_type == 'new'):
                 respCorrect = 1
             else:
                 respCorrect = 0
-            print(respCorrect)
         
         # Update counters
         totalTrials += 1
@@ -1972,6 +2217,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     voice_feedback.status = STARTED
     thisExp.addData('voice_feedback.started', voice_feedback.tStart)
     voice_feedback.maxDuration = None
+    # skip Routine voice_feedback if its 'Skip if' condition is True
+    voice_feedback.skipped = continueRoutine and not (debug)
+    continueRoutine = voice_feedback.skipped
     # keep track of which components have finished
     voice_feedbackComponents = voice_feedback.components
     for thisComponent in voice_feedback.components:
@@ -2103,188 +2351,385 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "voice_feedback" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
-    # --- Prepare to start Routine "bells_instructions" ---
-    # create an object to store info about Routine bells_instructions
-    bells_instructions = data.Routine(
-        name='bells_instructions',
-        components=[],
+    # set up handler to look after randomisation of conditions etc
+    trials_3 = data.TrialHandler2(
+        name='trials_3',
+        nReps=1.0, 
+        method='sequential', 
+        extraInfo=expInfo, 
+        originPath=-1, 
+        trialList=data.importConditions('conditions/bm_cond_file.csv'), 
+        seed=None, 
     )
-    bells_instructions.status = NOT_STARTED
-    continueRoutine = True
-    # update component parameters for each repeat
-    # store start times for bells_instructions
-    bells_instructions.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-    bells_instructions.tStart = globalClock.getTime(format='float')
-    bells_instructions.status = STARTED
-    thisExp.addData('bells_instructions.started', bells_instructions.tStart)
-    bells_instructions.maxDuration = None
-    # keep track of which components have finished
-    bells_instructionsComponents = bells_instructions.components
-    for thisComponent in bells_instructions.components:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
+    thisExp.addLoop(trials_3)  # add the loop to the experiment
+    thisTrial_3 = trials_3.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial_3.rgb)
+    if thisTrial_3 != None:
+        for paramName in thisTrial_3:
+            globals()[paramName] = thisTrial_3[paramName]
+    if thisSession is not None:
+        # if running in a Session with a Liaison client, send data up to now
+        thisSession.sendExperimentData()
     
-    # --- Run Routine "bells_instructions" ---
-    bells_instructions.forceEnded = routineForceEnded = not continueRoutine
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
+    for thisTrial_3 in trials_3:
+        currentLoop = trials_3
+        thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+        if thisSession is not None:
+            # if running in a Session with a Liaison client, send data up to now
+            thisSession.sendExperimentData()
+        # abbreviate parameter names if possible (e.g. rgb = thisTrial_3.rgb)
+        if thisTrial_3 != None:
+            for paramName in thisTrial_3:
+                globals()[paramName] = thisTrial_3[paramName]
         
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, win=win)
-            return
-        # pause experiment here if requested
-        if thisExp.status == PAUSED:
-            pauseExperiment(
-                thisExp=thisExp, 
-                win=win, 
-                timers=[routineTimer], 
-                playbackComponents=[]
-            )
-            # skip the frame we paused on
-            continue
+        # --- Prepare to start Routine "bells_memorisation" ---
+        # create an object to store info about Routine bells_memorisation
+        bells_memorisation = data.Routine(
+            name='bells_memorisation',
+            components=[bm_text, bm_btn, bm_sound_1, bm_sound_2, bm_sound_3, bm_sound_4, bm_sound_5, bm_sound_6, bm_sound_7, bm_sound_8],
+        )
+        bells_memorisation.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # Run 'Begin Routine' code from code_5
+        bm_text.text = bm_text_content
+        bm_btn.text = bm_btn_content
         
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            bells_instructions.forceEnded = routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in bells_instructions.components:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
+        bm_text.text = bm_text_content
+        bm_btn.text = bm_btn_content
         
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        if bm_auto_proceed == 1:
+            bm_text.draw()
             win.flip()
-    
-    # --- Ending Routine "bells_instructions" ---
-    for thisComponent in bells_instructions.components:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # store stop times for bells_instructions
-    bells_instructions.tStop = globalClock.getTime(format='float')
-    bells_instructions.tStopRefresh = tThisFlipGlobal
-    thisExp.addData('bells_instructions.stopped', bells_instructions.tStop)
-    thisExp.nextEntry()
-    # the Routine "bells_instructions" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
-    # --- Prepare to start Routine "bells_memorisation" ---
-    # create an object to store info about Routine bells_memorisation
-    bells_memorisation = data.Routine(
-        name='bells_memorisation',
-        components=[],
-    )
-    bells_memorisation.status = NOT_STARTED
-    continueRoutine = True
-    # update component parameters for each repeat
-    # store start times for bells_memorisation
-    bells_memorisation.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-    bells_memorisation.tStart = globalClock.getTime(format='float')
-    bells_memorisation.status = STARTED
-    thisExp.addData('bells_memorisation.started', bells_memorisation.tStart)
-    bells_memorisation.maxDuration = None
-    # keep track of which components have finished
-    bells_memorisationComponents = bells_memorisation.components
-    for thisComponent in bells_memorisation.components:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "bells_memorisation" ---
-    bells_memorisation.forceEnded = routineForceEnded = not continueRoutine
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
+            continueRoutine = False
         
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, win=win)
-            return
-        # pause experiment here if requested
-        if thisExp.status == PAUSED:
-            pauseExperiment(
-                thisExp=thisExp, 
-                win=win, 
-                timers=[routineTimer], 
-                playbackComponents=[]
-            )
-            # skip the frame we paused on
-            continue
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            bells_memorisation.forceEnded = routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
+        if bm_playSound == 1:
+            for snd in [bm_sound_1, bm_sound_2, bm_sound_3, bm_sound_4,
+                        bm_sound_5, bm_sound_6, bm_sound_7, bm_sound_8]:
+             for _ in range(3):
+                    snd.play()
+                    core.wait(snd.getDuration() + 0.1)
+            continueRoutine = False
+        # reset bm_btn to account for continued clicks & clear times on/off
+        bm_btn.reset()
+        bm_sound_1.setSound('Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID01.wav', hamming=True)
+        bm_sound_1.setVolume(1.0, log=False)
+        bm_sound_1.seek(0)
+        bm_sound_2.setSound('Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID02.wav', hamming=True)
+        bm_sound_2.setVolume(1.0, log=False)
+        bm_sound_2.seek(0)
+        bm_sound_3.setSound('Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID03.wav', hamming=True)
+        bm_sound_3.setVolume(1.0, log=False)
+        bm_sound_3.seek(0)
+        bm_sound_4.setSound('Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID04.wav', hamming=True)
+        bm_sound_4.setVolume(1.0, log=False)
+        bm_sound_4.seek(0)
+        bm_sound_5.setSound('Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID05.wav', hamming=True)
+        bm_sound_5.setVolume(1.0, log=False)
+        bm_sound_5.seek(0)
+        bm_sound_6.setSound('Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID06.wav', hamming=True)
+        bm_sound_6.setVolume(1.0, log=False)
+        bm_sound_6.seek(0)
+        bm_sound_7.setSound('Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID07.wav', hamming=True)
+        bm_sound_7.setVolume(1.0, log=False)
+        bm_sound_7.seek(0)
+        bm_sound_8.setSound('Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID08.wav', hamming=True)
+        bm_sound_8.setVolume(1.0, log=False)
+        bm_sound_8.seek(0)
+        # store start times for bells_memorisation
+        bells_memorisation.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        bells_memorisation.tStart = globalClock.getTime(format='float')
+        bells_memorisation.status = STARTED
+        thisExp.addData('bells_memorisation.started', bells_memorisation.tStart)
+        bells_memorisation.maxDuration = None
+        # keep track of which components have finished
+        bells_memorisationComponents = bells_memorisation.components
         for thisComponent in bells_memorisation.components:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
         
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
+        # --- Run Routine "bells_memorisation" ---
+        # if trial has changed, end Routine now
+        if isinstance(trials_3, data.TrialHandler2) and thisTrial_3.thisN != trials_3.thisTrial.thisN:
+            continueRoutine = False
+        bells_memorisation.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *bm_text* updates
+            
+            # if bm_text is starting this frame...
+            if bm_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                bm_text.frameNStart = frameN  # exact frame index
+                bm_text.tStart = t  # local t and not account for scr refresh
+                bm_text.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(bm_text, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'bm_text.started')
+                # update status
+                bm_text.status = STARTED
+                bm_text.setAutoDraw(True)
+            
+            # if bm_text is active this frame...
+            if bm_text.status == STARTED:
+                # update params
+                pass
+            # *bm_btn* updates
+            
+            # if bm_btn is starting this frame...
+            if bm_btn.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                # keep track of start time/frame for later
+                bm_btn.frameNStart = frameN  # exact frame index
+                bm_btn.tStart = t  # local t and not account for scr refresh
+                bm_btn.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(bm_btn, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'bm_btn.started')
+                # update status
+                bm_btn.status = STARTED
+                win.callOnFlip(bm_btn.buttonClock.reset)
+                bm_btn.setAutoDraw(True)
+            
+            # if bm_btn is active this frame...
+            if bm_btn.status == STARTED:
+                # update params
+                pass
+                # check whether bm_btn has been pressed
+                if bm_btn.isClicked:
+                    if not bm_btn.wasClicked:
+                        # if this is a new click, store time of first click and clicked until
+                        bm_btn.timesOn.append(bm_btn.buttonClock.getTime())
+                        bm_btn.timesOff.append(bm_btn.buttonClock.getTime())
+                    elif len(bm_btn.timesOff):
+                        # if click is continuing from last frame, update time of clicked until
+                        bm_btn.timesOff[-1] = bm_btn.buttonClock.getTime()
+                    if not bm_btn.wasClicked:
+                        # end routine when bm_btn is clicked
+                        continueRoutine = False
+                    if not bm_btn.wasClicked:
+                        # run callback code when bm_btn is clicked
+                        pass
+            # take note of whether bm_btn was clicked, so that next frame we know if clicks are new
+            bm_btn.wasClicked = bm_btn.isClicked and bm_btn.status == STARTED
+            
+            # *bm_sound_1* updates
+            
+            # if bm_sound_1 is stopping this frame...
+            if bm_sound_1.status == STARTED:
+                if bool(False) or bm_sound_1.isFinished:
+                    # keep track of stop time/frame for later
+                    bm_sound_1.tStop = t  # not accounting for scr refresh
+                    bm_sound_1.tStopRefresh = tThisFlipGlobal  # on global time
+                    bm_sound_1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'bm_sound_1.stopped')
+                    # update status
+                    bm_sound_1.status = FINISHED
+                    bm_sound_1.stop()
+            
+            # *bm_sound_2* updates
+            
+            # if bm_sound_2 is stopping this frame...
+            if bm_sound_2.status == STARTED:
+                if bool(False) or bm_sound_2.isFinished:
+                    # keep track of stop time/frame for later
+                    bm_sound_2.tStop = t  # not accounting for scr refresh
+                    bm_sound_2.tStopRefresh = tThisFlipGlobal  # on global time
+                    bm_sound_2.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'bm_sound_2.stopped')
+                    # update status
+                    bm_sound_2.status = FINISHED
+                    bm_sound_2.stop()
+            
+            # *bm_sound_3* updates
+            
+            # if bm_sound_3 is stopping this frame...
+            if bm_sound_3.status == STARTED:
+                if bool(False) or bm_sound_3.isFinished:
+                    # keep track of stop time/frame for later
+                    bm_sound_3.tStop = t  # not accounting for scr refresh
+                    bm_sound_3.tStopRefresh = tThisFlipGlobal  # on global time
+                    bm_sound_3.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'bm_sound_3.stopped')
+                    # update status
+                    bm_sound_3.status = FINISHED
+                    bm_sound_3.stop()
+            
+            # *bm_sound_4* updates
+            
+            # if bm_sound_4 is stopping this frame...
+            if bm_sound_4.status == STARTED:
+                if bool(False) or bm_sound_4.isFinished:
+                    # keep track of stop time/frame for later
+                    bm_sound_4.tStop = t  # not accounting for scr refresh
+                    bm_sound_4.tStopRefresh = tThisFlipGlobal  # on global time
+                    bm_sound_4.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'bm_sound_4.stopped')
+                    # update status
+                    bm_sound_4.status = FINISHED
+                    bm_sound_4.stop()
+            
+            # *bm_sound_5* updates
+            
+            # if bm_sound_5 is stopping this frame...
+            if bm_sound_5.status == STARTED:
+                if bool(False) or bm_sound_5.isFinished:
+                    # keep track of stop time/frame for later
+                    bm_sound_5.tStop = t  # not accounting for scr refresh
+                    bm_sound_5.tStopRefresh = tThisFlipGlobal  # on global time
+                    bm_sound_5.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'bm_sound_5.stopped')
+                    # update status
+                    bm_sound_5.status = FINISHED
+                    bm_sound_5.stop()
+            
+            # *bm_sound_6* updates
+            
+            # if bm_sound_6 is stopping this frame...
+            if bm_sound_6.status == STARTED:
+                if bool(False) or bm_sound_6.isFinished:
+                    # keep track of stop time/frame for later
+                    bm_sound_6.tStop = t  # not accounting for scr refresh
+                    bm_sound_6.tStopRefresh = tThisFlipGlobal  # on global time
+                    bm_sound_6.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'bm_sound_6.stopped')
+                    # update status
+                    bm_sound_6.status = FINISHED
+                    bm_sound_6.stop()
+            
+            # *bm_sound_7* updates
+            
+            # if bm_sound_7 is stopping this frame...
+            if bm_sound_7.status == STARTED:
+                if bool(False) or bm_sound_7.isFinished:
+                    # keep track of stop time/frame for later
+                    bm_sound_7.tStop = t  # not accounting for scr refresh
+                    bm_sound_7.tStopRefresh = tThisFlipGlobal  # on global time
+                    bm_sound_7.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'bm_sound_7.stopped')
+                    # update status
+                    bm_sound_7.status = FINISHED
+                    bm_sound_7.stop()
+            
+            # *bm_sound_8* updates
+            
+            # if bm_sound_8 is stopping this frame...
+            if bm_sound_8.status == STARTED:
+                if bool(False) or bm_sound_8.isFinished:
+                    # keep track of stop time/frame for later
+                    bm_sound_8.tStop = t  # not accounting for scr refresh
+                    bm_sound_8.tStopRefresh = tThisFlipGlobal  # on global time
+                    bm_sound_8.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'bm_sound_8.stopped')
+                    # update status
+                    bm_sound_8.status = FINISHED
+                    bm_sound_8.stop()
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer], 
+                    playbackComponents=[bm_sound_1, bm_sound_2, bm_sound_3, bm_sound_4, bm_sound_5, bm_sound_6, bm_sound_7, bm_sound_8]
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                bells_memorisation.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in bells_memorisation.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "bells_memorisation" ---
+        for thisComponent in bells_memorisation.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for bells_memorisation
+        bells_memorisation.tStop = globalClock.getTime(format='float')
+        bells_memorisation.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('bells_memorisation.stopped', bells_memorisation.tStop)
+        trials_3.addData('bm_btn.numClicks', bm_btn.numClicks)
+        if bm_btn.numClicks:
+           trials_3.addData('bm_btn.timesOn', bm_btn.timesOn)
+           trials_3.addData('bm_btn.timesOff', bm_btn.timesOff)
+        else:
+           trials_3.addData('bm_btn.timesOn', "")
+           trials_3.addData('bm_btn.timesOff', "")
+        bm_sound_1.pause()  # ensure sound has stopped at end of Routine
+        bm_sound_2.pause()  # ensure sound has stopped at end of Routine
+        bm_sound_3.pause()  # ensure sound has stopped at end of Routine
+        bm_sound_4.pause()  # ensure sound has stopped at end of Routine
+        bm_sound_5.pause()  # ensure sound has stopped at end of Routine
+        bm_sound_6.pause()  # ensure sound has stopped at end of Routine
+        bm_sound_7.pause()  # ensure sound has stopped at end of Routine
+        bm_sound_8.pause()  # ensure sound has stopped at end of Routine
+        # the Routine "bells_memorisation" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        thisExp.nextEntry()
+        
+    # completed 1.0 repeats of 'trials_3'
     
-    # --- Ending Routine "bells_memorisation" ---
-    for thisComponent in bells_memorisation.components:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # store stop times for bells_memorisation
-    bells_memorisation.tStop = globalClock.getTime(format='float')
-    bells_memorisation.tStopRefresh = tThisFlipGlobal
-    thisExp.addData('bells_memorisation.stopped', bells_memorisation.tStop)
-    thisExp.nextEntry()
-    # the Routine "bells_memorisation" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
+    if thisSession is not None:
+        # if running in a Session with a Liaison client, send data up to now
+        thisSession.sendExperimentData()
     
-    # --- Prepare to start Routine "bells_task" ---
-    # create an object to store info about Routine bells_task
-    bells_task = data.Routine(
-        name='bells_task',
-        components=[],
+    # --- Prepare to start Routine "bells_task_intro" ---
+    # create an object to store info about Routine bells_task_intro
+    bells_task_intro = data.Routine(
+        name='bells_task_intro',
+        components=[bti_text, bti_btn],
     )
-    bells_task.status = NOT_STARTED
+    bells_task_intro.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
-    # store start times for bells_task
-    bells_task.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-    bells_task.tStart = globalClock.getTime(format='float')
-    bells_task.status = STARTED
-    thisExp.addData('bells_task.started', bells_task.tStart)
-    bells_task.maxDuration = None
+    # reset bti_btn to account for continued clicks & clear times on/off
+    bti_btn.reset()
+    # store start times for bells_task_intro
+    bells_task_intro.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    bells_task_intro.tStart = globalClock.getTime(format='float')
+    bells_task_intro.status = STARTED
+    thisExp.addData('bells_task_intro.started', bells_task_intro.tStart)
+    bells_task_intro.maxDuration = None
     # keep track of which components have finished
-    bells_taskComponents = bells_task.components
-    for thisComponent in bells_task.components:
+    bells_task_introComponents = bells_task_intro.components
+    for thisComponent in bells_task_intro.components:
         thisComponent.tStart = None
         thisComponent.tStop = None
         thisComponent.tStartRefresh = None
@@ -2296,8 +2741,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     _timeToFirstFrame = win.getFutureFlipTime(clock="now")
     frameN = -1
     
-    # --- Run Routine "bells_task" ---
-    bells_task.forceEnded = routineForceEnded = not continueRoutine
+    # --- Run Routine "bells_task_intro" ---
+    bells_task_intro.forceEnded = routineForceEnded = not continueRoutine
     while continueRoutine:
         # get current time
         t = routineTimer.getTime()
@@ -2305,6 +2750,63 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *bti_text* updates
+        
+        # if bti_text is starting this frame...
+        if bti_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            bti_text.frameNStart = frameN  # exact frame index
+            bti_text.tStart = t  # local t and not account for scr refresh
+            bti_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(bti_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'bti_text.started')
+            # update status
+            bti_text.status = STARTED
+            bti_text.setAutoDraw(True)
+        
+        # if bti_text is active this frame...
+        if bti_text.status == STARTED:
+            # update params
+            pass
+        # *bti_btn* updates
+        
+        # if bti_btn is starting this frame...
+        if bti_btn.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            bti_btn.frameNStart = frameN  # exact frame index
+            bti_btn.tStart = t  # local t and not account for scr refresh
+            bti_btn.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(bti_btn, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'bti_btn.started')
+            # update status
+            bti_btn.status = STARTED
+            win.callOnFlip(bti_btn.buttonClock.reset)
+            bti_btn.setAutoDraw(True)
+        
+        # if bti_btn is active this frame...
+        if bti_btn.status == STARTED:
+            # update params
+            pass
+            # check whether bti_btn has been pressed
+            if bti_btn.isClicked:
+                if not bti_btn.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    bti_btn.timesOn.append(bti_btn.buttonClock.getTime())
+                    bti_btn.timesOff.append(bti_btn.buttonClock.getTime())
+                elif len(bti_btn.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    bti_btn.timesOff[-1] = bti_btn.buttonClock.getTime()
+                if not bti_btn.wasClicked:
+                    # end routine when bti_btn is clicked
+                    continueRoutine = False
+                if not bti_btn.wasClicked:
+                    # run callback code when bti_btn is clicked
+                    pass
+        # take note of whether bti_btn was clicked, so that next frame we know if clicks are new
+        bti_btn.wasClicked = bti_btn.isClicked and bti_btn.status == STARTED
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2325,10 +2827,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
-            bells_task.forceEnded = routineForceEnded = True
+            bells_task_intro.forceEnded = routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in bells_task.components:
+        for thisComponent in bells_task_intro.components:
             if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                 continueRoutine = True
                 break  # at least one component has not yet finished
@@ -2337,27 +2839,392 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
     
-    # --- Ending Routine "bells_task" ---
-    for thisComponent in bells_task.components:
+    # --- Ending Routine "bells_task_intro" ---
+    for thisComponent in bells_task_intro.components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    # store stop times for bells_task
-    bells_task.tStop = globalClock.getTime(format='float')
-    bells_task.tStopRefresh = tThisFlipGlobal
-    thisExp.addData('bells_task.stopped', bells_task.tStop)
+    # store stop times for bells_task_intro
+    bells_task_intro.tStop = globalClock.getTime(format='float')
+    bells_task_intro.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('bells_task_intro.stopped', bells_task_intro.tStop)
+    thisExp.addData('bti_btn.numClicks', bti_btn.numClicks)
+    if bti_btn.numClicks:
+       thisExp.addData('bti_btn.timesOn', bti_btn.timesOn)
+       thisExp.addData('bti_btn.timesOff', bti_btn.timesOff)
+    else:
+       thisExp.addData('bti_btn.timesOn', "")
+       thisExp.addData('bti_btn.timesOff', "")
     thisExp.nextEntry()
-    # the Routine "bells_task" was not non-slip safe, so reset the non-slip timer
+    # the Routine "bells_task_intro" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
+    
+    # set up handler to look after randomisation of conditions etc
+    trials_4 = data.TrialHandler2(
+        name='trials_4',
+        nReps=1.0, 
+        method='random', 
+        extraInfo=expInfo, 
+        originPath=-1, 
+        trialList=data.importConditions('conditions/bt_cond_file.csv'), 
+        seed=None, 
+    )
+    thisExp.addLoop(trials_4)  # add the loop to the experiment
+    thisTrial_4 = trials_4.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial_4.rgb)
+    if thisTrial_4 != None:
+        for paramName in thisTrial_4:
+            globals()[paramName] = thisTrial_4[paramName]
+    if thisSession is not None:
+        # if running in a Session with a Liaison client, send data up to now
+        thisSession.sendExperimentData()
+    
+    for thisTrial_4 in trials_4:
+        currentLoop = trials_4
+        thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+        if thisSession is not None:
+            # if running in a Session with a Liaison client, send data up to now
+            thisSession.sendExperimentData()
+        # abbreviate parameter names if possible (e.g. rgb = thisTrial_4.rgb)
+        if thisTrial_4 != None:
+            for paramName in thisTrial_4:
+                globals()[paramName] = thisTrial_4[paramName]
+        
+        # --- Prepare to start Routine "bells_task_load" ---
+        # create an object to store info about Routine bells_task_load
+        bells_task_load = data.Routine(
+            name='bells_task_load',
+            components=[btl_text],
+        )
+        bells_task_load.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # store start times for bells_task_load
+        bells_task_load.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        bells_task_load.tStart = globalClock.getTime(format='float')
+        bells_task_load.status = STARTED
+        thisExp.addData('bells_task_load.started', bells_task_load.tStart)
+        bells_task_load.maxDuration = None
+        # keep track of which components have finished
+        bells_task_loadComponents = bells_task_load.components
+        for thisComponent in bells_task_load.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "bells_task_load" ---
+        # if trial has changed, end Routine now
+        if isinstance(trials_4, data.TrialHandler2) and thisTrial_4.thisN != trials_4.thisTrial.thisN:
+            continueRoutine = False
+        bells_task_load.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine and routineTimer.getTime() < 0.5:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *btl_text* updates
+            
+            # if btl_text is starting this frame...
+            if btl_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                btl_text.frameNStart = frameN  # exact frame index
+                btl_text.tStart = t  # local t and not account for scr refresh
+                btl_text.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(btl_text, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'btl_text.started')
+                # update status
+                btl_text.status = STARTED
+                btl_text.setAutoDraw(True)
+            
+            # if btl_text is active this frame...
+            if btl_text.status == STARTED:
+                # update params
+                pass
+            
+            # if btl_text is stopping this frame...
+            if btl_text.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > btl_text.tStartRefresh + 0.5-frameTolerance:
+                    # keep track of stop time/frame for later
+                    btl_text.tStop = t  # not accounting for scr refresh
+                    btl_text.tStopRefresh = tThisFlipGlobal  # on global time
+                    btl_text.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'btl_text.stopped')
+                    # update status
+                    btl_text.status = FINISHED
+                    btl_text.setAutoDraw(False)
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer], 
+                    playbackComponents=[]
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                bells_task_load.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in bells_task_load.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "bells_task_load" ---
+        for thisComponent in bells_task_load.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for bells_task_load
+        bells_task_load.tStop = globalClock.getTime(format='float')
+        bells_task_load.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('bells_task_load.stopped', bells_task_load.tStop)
+        # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+        if bells_task_load.maxDurationReached:
+            routineTimer.addTime(-bells_task_load.maxDuration)
+        elif bells_task_load.forceEnded:
+            routineTimer.reset()
+        else:
+            routineTimer.addTime(-0.500000)
+        
+        # --- Prepare to start Routine "bells_task" ---
+        # create an object to store info about Routine bells_task
+        bells_task = data.Routine(
+            name='bells_task',
+            components=[bt_text, bt_sound, bt_key],
+        )
+        bells_task.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # Run 'Begin Routine' code from code_6
+        respKey = None
+        respCorrect = None
+        
+        bt_sound.setSound(bt_soundfile, hamming=True)
+        bt_sound.setVolume(1.0, log=False)
+        bt_sound.seek(0)
+        # create starting attributes for bt_key
+        bt_key.keys = []
+        bt_key.rt = []
+        _bt_key_allKeys = []
+        # store start times for bells_task
+        bells_task.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        bells_task.tStart = globalClock.getTime(format='float')
+        bells_task.status = STARTED
+        thisExp.addData('bells_task.started', bells_task.tStart)
+        bells_task.maxDuration = None
+        # keep track of which components have finished
+        bells_taskComponents = bells_task.components
+        for thisComponent in bells_task.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "bells_task" ---
+        # if trial has changed, end Routine now
+        if isinstance(trials_4, data.TrialHandler2) and thisTrial_4.thisN != trials_4.thisTrial.thisN:
+            continueRoutine = False
+        bells_task.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *bt_text* updates
+            
+            # if bt_text is starting this frame...
+            if bt_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                bt_text.frameNStart = frameN  # exact frame index
+                bt_text.tStart = t  # local t and not account for scr refresh
+                bt_text.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(bt_text, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'bt_text.started')
+                # update status
+                bt_text.status = STARTED
+                bt_text.setAutoDraw(True)
+            
+            # if bt_text is active this frame...
+            if bt_text.status == STARTED:
+                # update params
+                pass
+            
+            # *bt_sound* updates
+            
+            # if bt_sound is starting this frame...
+            if bt_sound.status == NOT_STARTED and tThisFlip >= 0.1-frameTolerance:
+                # keep track of start time/frame for later
+                bt_sound.frameNStart = frameN  # exact frame index
+                bt_sound.tStart = t  # local t and not account for scr refresh
+                bt_sound.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('bt_sound.started', tThisFlipGlobal)
+                # update status
+                bt_sound.status = STARTED
+                bt_sound.play(when=win)  # sync with win flip
+            
+            # if bt_sound is stopping this frame...
+            if bt_sound.status == STARTED:
+                if bool(False) or bt_sound.isFinished:
+                    # keep track of stop time/frame for later
+                    bt_sound.tStop = t  # not accounting for scr refresh
+                    bt_sound.tStopRefresh = tThisFlipGlobal  # on global time
+                    bt_sound.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'bt_sound.stopped')
+                    # update status
+                    bt_sound.status = FINISHED
+                    bt_sound.stop()
+            
+            # *bt_key* updates
+            waitOnFlip = False
+            
+            # if bt_key is starting this frame...
+            if bt_key.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+                # keep track of start time/frame for later
+                bt_key.frameNStart = frameN  # exact frame index
+                bt_key.tStart = t  # local t and not account for scr refresh
+                bt_key.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(bt_key, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'bt_key.started')
+                # update status
+                bt_key.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(bt_key.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(bt_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
+            if bt_key.status == STARTED and not waitOnFlip:
+                theseKeys = bt_key.getKeys(keyList=['z', 'm'], ignoreKeys=["escape"], waitRelease=True)
+                _bt_key_allKeys.extend(theseKeys)
+                if len(_bt_key_allKeys):
+                    bt_key.keys = _bt_key_allKeys[-1].name  # just the last key pressed
+                    bt_key.rt = _bt_key_allKeys[-1].rt
+                    bt_key.duration = _bt_key_allKeys[-1].duration
+                    # a response ends the routine
+                    continueRoutine = False
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer], 
+                    playbackComponents=[bt_sound]
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                bells_task.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in bells_task.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "bells_task" ---
+        for thisComponent in bells_task.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for bells_task
+        bells_task.tStop = globalClock.getTime(format='float')
+        bells_task.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('bells_task.stopped', bells_task.tStop)
+        # Run 'End Routine' code from code_6
+        # Check response from Keyboard component
+        if bt_key.keys:  # participant pressed a key
+            respKey = bt_key.keys[0]  # first key pressed
+            if (respKey == 'z' and bt_type == 'old') or (respKey == 'm' and bt_type == 'new'):
+                respCorrect = 1
+            else:
+                respCorrect = 0
+        
+        # Update counters
+        totalTrials += 1
+        if respCorrect == 1:
+            totalCorrect += 1
+        bt_sound.pause()  # ensure sound has stopped at end of Routine
+        # check responses
+        if bt_key.keys in ['', [], None]:  # No response was made
+            bt_key.keys = None
+        trials_4.addData('bt_key.keys',bt_key.keys)
+        if bt_key.keys != None:  # we had a response
+            trials_4.addData('bt_key.rt', bt_key.rt)
+            trials_4.addData('bt_key.duration', bt_key.duration)
+        # the Routine "bells_task" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        thisExp.nextEntry()
+        
+    # completed 1.0 repeats of 'trials_4'
+    
+    if thisSession is not None:
+        # if running in a Session with a Liaison client, send data up to now
+        thisSession.sendExperimentData()
     
     # --- Prepare to start Routine "bells_feedback" ---
     # create an object to store info about Routine bells_feedback
     bells_feedback = data.Routine(
         name='bells_feedback',
-        components=[],
+        components=[bf_text, bf_btn],
     )
     bells_feedback.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
+    # Run 'Begin Routine' code from code_7
+    
+    accuracy_percent = (totalCorrect / totalTrials) * 100
+    bf_text.text = f"Your accuracy for the bells was {accuracy_percent:.1f}%\nAs an indication, the general population accuracy for this type of sound is 78.8 %\n\nClick 'Next' to continue"
+    # reset bf_btn to account for continued clicks & clear times on/off
+    bf_btn.reset()
     # store start times for bells_feedback
     bells_feedback.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
     bells_feedback.tStart = globalClock.getTime(format='float')
@@ -2387,6 +3254,63 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *bf_text* updates
+        
+        # if bf_text is starting this frame...
+        if bf_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            bf_text.frameNStart = frameN  # exact frame index
+            bf_text.tStart = t  # local t and not account for scr refresh
+            bf_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(bf_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'bf_text.started')
+            # update status
+            bf_text.status = STARTED
+            bf_text.setAutoDraw(True)
+        
+        # if bf_text is active this frame...
+        if bf_text.status == STARTED:
+            # update params
+            pass
+        # *bf_btn* updates
+        
+        # if bf_btn is starting this frame...
+        if bf_btn.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            bf_btn.frameNStart = frameN  # exact frame index
+            bf_btn.tStart = t  # local t and not account for scr refresh
+            bf_btn.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(bf_btn, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'bf_btn.started')
+            # update status
+            bf_btn.status = STARTED
+            win.callOnFlip(bf_btn.buttonClock.reset)
+            bf_btn.setAutoDraw(True)
+        
+        # if bf_btn is active this frame...
+        if bf_btn.status == STARTED:
+            # update params
+            pass
+            # check whether bf_btn has been pressed
+            if bf_btn.isClicked:
+                if not bf_btn.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    bf_btn.timesOn.append(bf_btn.buttonClock.getTime())
+                    bf_btn.timesOff.append(bf_btn.buttonClock.getTime())
+                elif len(bf_btn.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    bf_btn.timesOff[-1] = bf_btn.buttonClock.getTime()
+                if not bf_btn.wasClicked:
+                    # end routine when bf_btn is clicked
+                    continueRoutine = False
+                if not bf_btn.wasClicked:
+                    # run callback code when bf_btn is clicked
+                    pass
+        # take note of whether bf_btn was clicked, so that next frame we know if clicks are new
+        bf_btn.wasClicked = bf_btn.isClicked and bf_btn.status == STARTED
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2427,6 +3351,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     bells_feedback.tStop = globalClock.getTime(format='float')
     bells_feedback.tStopRefresh = tThisFlipGlobal
     thisExp.addData('bells_feedback.stopped', bells_feedback.tStop)
+    thisExp.addData('bf_btn.numClicks', bf_btn.numClicks)
+    if bf_btn.numClicks:
+       thisExp.addData('bf_btn.timesOn', bf_btn.timesOn)
+       thisExp.addData('bf_btn.timesOff', bf_btn.timesOff)
+    else:
+       thisExp.addData('bf_btn.timesOn', "")
+       thisExp.addData('bf_btn.timesOff', "")
     thisExp.nextEntry()
     # the Routine "bells_feedback" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
@@ -2435,11 +3366,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine finish
     finish = data.Routine(
         name='finish',
-        components=[],
+        components=[fin_text, fin_btn],
     )
     finish.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
+    # reset fin_btn to account for continued clicks & clear times on/off
+    fin_btn.reset()
     # store start times for finish
     finish.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
     finish.tStart = globalClock.getTime(format='float')
@@ -2469,6 +3402,63 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *fin_text* updates
+        
+        # if fin_text is starting this frame...
+        if fin_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            fin_text.frameNStart = frameN  # exact frame index
+            fin_text.tStart = t  # local t and not account for scr refresh
+            fin_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(fin_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'fin_text.started')
+            # update status
+            fin_text.status = STARTED
+            fin_text.setAutoDraw(True)
+        
+        # if fin_text is active this frame...
+        if fin_text.status == STARTED:
+            # update params
+            pass
+        # *fin_btn* updates
+        
+        # if fin_btn is starting this frame...
+        if fin_btn.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            fin_btn.frameNStart = frameN  # exact frame index
+            fin_btn.tStart = t  # local t and not account for scr refresh
+            fin_btn.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(fin_btn, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'fin_btn.started')
+            # update status
+            fin_btn.status = STARTED
+            win.callOnFlip(fin_btn.buttonClock.reset)
+            fin_btn.setAutoDraw(True)
+        
+        # if fin_btn is active this frame...
+        if fin_btn.status == STARTED:
+            # update params
+            pass
+            # check whether fin_btn has been pressed
+            if fin_btn.isClicked:
+                if not fin_btn.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    fin_btn.timesOn.append(fin_btn.buttonClock.getTime())
+                    fin_btn.timesOff.append(fin_btn.buttonClock.getTime())
+                elif len(fin_btn.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    fin_btn.timesOff[-1] = fin_btn.buttonClock.getTime()
+                if not fin_btn.wasClicked:
+                    # end routine when fin_btn is clicked
+                    continueRoutine = False
+                if not fin_btn.wasClicked:
+                    # run callback code when fin_btn is clicked
+                    pass
+        # take note of whether fin_btn was clicked, so that next frame we know if clicks are new
+        fin_btn.wasClicked = fin_btn.isClicked and fin_btn.status == STARTED
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2509,6 +3499,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     finish.tStop = globalClock.getTime(format='float')
     finish.tStopRefresh = tThisFlipGlobal
     thisExp.addData('finish.stopped', finish.tStop)
+    thisExp.addData('fin_btn.numClicks', fin_btn.numClicks)
+    if fin_btn.numClicks:
+       thisExp.addData('fin_btn.timesOn', fin_btn.timesOn)
+       thisExp.addData('fin_btn.timesOff', fin_btn.timesOff)
+    else:
+       thisExp.addData('fin_btn.timesOn', "")
+       thisExp.addData('fin_btn.timesOff', "")
     thisExp.nextEntry()
     # the Routine "finish" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()

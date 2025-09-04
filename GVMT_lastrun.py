@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Wed  3 Sep 15:54:07 2025
+    on Thu  4 Sep 09:44:09 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -513,6 +513,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     int_btn.buttonClock = core.Clock()
     # Run 'Begin Experiment' code from code_8
     debug = False
+    neverPlay = False
     
     # --- Initialize components for Routine "sound_test" ---
     st_text = visual.TextStim(win=win, name='st_text',
@@ -521,7 +522,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.03, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     st_play_btn = visual.ButtonStim(win, 
         text='Test Sound', font='Arvo',
         pos=(0, -0.25),
@@ -536,7 +537,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         padding=None,
         anchor='center',
         name='st_play_btn',
-        depth=-1
+        depth=-2
     )
     st_play_btn.buttonClock = core.Clock()
     st_cont_btn = visual.ButtonStim(win, 
@@ -553,7 +554,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         padding=None,
         anchor='center',
         name='st_cont_btn',
-        depth=-2
+        depth=-3
     )
     st_cont_btn.buttonClock = core.Clock()
     st_sound = sound.Sound(
@@ -574,7 +575,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     vm_btn = visual.ButtonStim(win, 
-        text=None, font='Arvo',
+        text='placeholder', font='Arvo',
         pos=(0, -0.4),
         letterHeight=0.03,
         size=(0.25, 0.1), 
@@ -659,7 +660,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     vti_text = visual.TextStim(win=win, name='vti_text',
         text='Testing instruction\n\nDuring the testing phase, you will listen to "Voice" sounds that are either OLD (sounds that were presented during the familiarization phase) or NEW (sounds that were presented NOT during the familiarization phase).\n\nAfter the playback of a sound press:\n- Press \'z\' if you think this was an OLD sound\n- Press \'m\' if you think this was a NEW sound',
         font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), draggable=False, height=0.045, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -700,8 +701,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     # Run 'Begin Experiment' code from code_3
     # Initialize counters
-    totalTrials = 0
-    totalCorrect = 0
+    vt_totalTrials = 0
+    vt_totalCorrect = 0
     vt_sound = sound.Sound(
         'A', 
         secs=-1, 
@@ -747,7 +748,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     bm_btn = visual.ButtonStim(win, 
-        text=None, font='Arvo',
+        text=' ', font='Arvo',
         pos=(0, -0.4),
         letterHeight=0.03,
         size=(0.25, 0.1), 
@@ -832,7 +833,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     bti_text = visual.TextStim(win=win, name='bti_text',
         text='Testing instruction\n\nDuring the testing phase, you will listen to "Bell" sounds that are either OLD (sounds that were presented during the familiarization phase) or NEW (sounds that were presented NOT during the familiarization phase).\n\nAfter the playback of a sound press:\n- Press \'z\' if you think this was an OLD sound\n- Press \'m\' if you think this was a NEW sound',
         font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), draggable=False, height=0.045, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -873,8 +874,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     # Run 'Begin Experiment' code from code_6
     # Initialize counters
-    totalTrials = 0
-    totalCorrect = 0
+    bt_totalTrials = 0
+    bt_totalCorrect = 0
     bt_sound = sound.Sound(
         'A', 
         secs=-1, 
@@ -1122,6 +1123,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     sound_test.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
+    # Run 'Begin Routine' code from code
+    st_play_once = False
+    st_soundPlaying = False
+    
     # reset st_play_btn to account for continued clicks & clear times on/off
     st_play_btn.reset()
     # reset st_cont_btn to account for continued clicks & clear times on/off
@@ -1129,10 +1134,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     st_sound.setSound('Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/FemaleAverage.wav', hamming=True)
     st_sound.setVolume(1.0, log=False)
     st_sound.seek(0)
-    # Run 'Begin Routine' code from code
-    st_play_once = False
-    st_soundPlaying = False
-    
     # store start times for sound_test
     sound_test.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
     sound_test.tStart = globalClock.getTime(format='float')
@@ -1165,6 +1166,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        # Run 'Each Frame' code from code
+        if st_play_btn.wasClicked and not st_soundPlaying:
+            st_sound.play()
+            st_soundPlaying = True
+            st_playStart = t
+        
+        if st_soundPlaying:
+            if t - st_playStart >= st_sound.getDuration():
+                st_soundPlaying = False
         
         # *st_text* updates
         
@@ -1259,6 +1269,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # *st_sound* updates
         
+        # if st_sound is starting this frame...
+        if st_sound.status == NOT_STARTED and neverPlay:
+            # keep track of start time/frame for later
+            st_sound.frameNStart = frameN  # exact frame index
+            st_sound.tStart = t  # local t and not account for scr refresh
+            st_sound.tStartRefresh = tThisFlipGlobal  # on global time
+            # add timestamp to datafile
+            thisExp.addData('st_sound.started', tThisFlipGlobal)
+            # update status
+            st_sound.status = STARTED
+            st_sound.play(when=win)  # sync with win flip
+        
         # if st_sound is stopping this frame...
         if st_sound.status == STARTED:
             if bool(False) or st_sound.isFinished:
@@ -1271,15 +1293,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update status
                 st_sound.status = FINISHED
                 st_sound.stop()
-        # Run 'Each Frame' code from code
-        if st_play_btn.wasClicked and not st_soundPlaying:
-            st_sound.play()
-            st_soundPlaying = True
-            st_playStart = t
-        
-        if st_soundPlaying:
-            if t - st_playStart >= st_sound.getDuration():
-                st_soundPlaying = False
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1421,9 +1434,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         voice_memorisation.status = STARTED
         thisExp.addData('voice_memorisation.started', voice_memorisation.tStart)
         voice_memorisation.maxDuration = None
-        # skip Routine voice_memorisation if its 'Skip if' condition is True
-        voice_memorisation.skipped = continueRoutine and not (debug)
-        continueRoutine = voice_memorisation.skipped
         # keep track of which components have finished
         voice_memorisationComponents = voice_memorisation.components
         for thisComponent in voice_memorisation.components:
@@ -1510,6 +1520,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # *vm_sound_1* updates
             
+            # if vm_sound_1 is starting this frame...
+            if vm_sound_1.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                vm_sound_1.frameNStart = frameN  # exact frame index
+                vm_sound_1.tStart = t  # local t and not account for scr refresh
+                vm_sound_1.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('vm_sound_1.started', tThisFlipGlobal)
+                # update status
+                vm_sound_1.status = STARTED
+                vm_sound_1.play(when=win)  # sync with win flip
+            
             # if vm_sound_1 is stopping this frame...
             if vm_sound_1.status == STARTED:
                 if bool(False) or vm_sound_1.isFinished:
@@ -1524,6 +1546,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     vm_sound_1.stop()
             
             # *vm_sound_2* updates
+            
+            # if vm_sound_2 is starting this frame...
+            if vm_sound_2.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                vm_sound_2.frameNStart = frameN  # exact frame index
+                vm_sound_2.tStart = t  # local t and not account for scr refresh
+                vm_sound_2.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('vm_sound_2.started', tThisFlipGlobal)
+                # update status
+                vm_sound_2.status = STARTED
+                vm_sound_2.play(when=win)  # sync with win flip
             
             # if vm_sound_2 is stopping this frame...
             if vm_sound_2.status == STARTED:
@@ -1540,6 +1574,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # *vm_sound_3* updates
             
+            # if vm_sound_3 is starting this frame...
+            if vm_sound_3.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                vm_sound_3.frameNStart = frameN  # exact frame index
+                vm_sound_3.tStart = t  # local t and not account for scr refresh
+                vm_sound_3.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('vm_sound_3.started', tThisFlipGlobal)
+                # update status
+                vm_sound_3.status = STARTED
+                vm_sound_3.play(when=win)  # sync with win flip
+            
             # if vm_sound_3 is stopping this frame...
             if vm_sound_3.status == STARTED:
                 if bool(False) or vm_sound_3.isFinished:
@@ -1554,6 +1600,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     vm_sound_3.stop()
             
             # *vm_sound_4* updates
+            
+            # if vm_sound_4 is starting this frame...
+            if vm_sound_4.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                vm_sound_4.frameNStart = frameN  # exact frame index
+                vm_sound_4.tStart = t  # local t and not account for scr refresh
+                vm_sound_4.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('vm_sound_4.started', tThisFlipGlobal)
+                # update status
+                vm_sound_4.status = STARTED
+                vm_sound_4.play(when=win)  # sync with win flip
             
             # if vm_sound_4 is stopping this frame...
             if vm_sound_4.status == STARTED:
@@ -1570,6 +1628,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # *vm_sound_5* updates
             
+            # if vm_sound_5 is starting this frame...
+            if vm_sound_5.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                vm_sound_5.frameNStart = frameN  # exact frame index
+                vm_sound_5.tStart = t  # local t and not account for scr refresh
+                vm_sound_5.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('vm_sound_5.started', tThisFlipGlobal)
+                # update status
+                vm_sound_5.status = STARTED
+                vm_sound_5.play(when=win)  # sync with win flip
+            
             # if vm_sound_5 is stopping this frame...
             if vm_sound_5.status == STARTED:
                 if bool(False) or vm_sound_5.isFinished:
@@ -1584,6 +1654,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     vm_sound_5.stop()
             
             # *vm_sound_6* updates
+            
+            # if vm_sound_6 is starting this frame...
+            if vm_sound_6.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                vm_sound_6.frameNStart = frameN  # exact frame index
+                vm_sound_6.tStart = t  # local t and not account for scr refresh
+                vm_sound_6.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('vm_sound_6.started', tThisFlipGlobal)
+                # update status
+                vm_sound_6.status = STARTED
+                vm_sound_6.play(when=win)  # sync with win flip
             
             # if vm_sound_6 is stopping this frame...
             if vm_sound_6.status == STARTED:
@@ -1600,6 +1682,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # *vm_sound_7* updates
             
+            # if vm_sound_7 is starting this frame...
+            if vm_sound_7.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                vm_sound_7.frameNStart = frameN  # exact frame index
+                vm_sound_7.tStart = t  # local t and not account for scr refresh
+                vm_sound_7.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('vm_sound_7.started', tThisFlipGlobal)
+                # update status
+                vm_sound_7.status = STARTED
+                vm_sound_7.play(when=win)  # sync with win flip
+            
             # if vm_sound_7 is stopping this frame...
             if vm_sound_7.status == STARTED:
                 if bool(False) or vm_sound_7.isFinished:
@@ -1614,6 +1708,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     vm_sound_7.stop()
             
             # *vm_sound_8* updates
+            
+            # if vm_sound_8 is starting this frame...
+            if vm_sound_8.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                vm_sound_8.frameNStart = frameN  # exact frame index
+                vm_sound_8.tStart = t  # local t and not account for scr refresh
+                vm_sound_8.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('vm_sound_8.started', tThisFlipGlobal)
+                # update status
+                vm_sound_8.status = STARTED
+                vm_sound_8.play(when=win)  # sync with win flip
             
             # if vm_sound_8 is stopping this frame...
             if vm_sound_8.status == STARTED:
@@ -1704,9 +1810,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     voice_task_intro.status = STARTED
     thisExp.addData('voice_task_intro.started', voice_task_intro.tStart)
     voice_task_intro.maxDuration = None
-    # skip Routine voice_task_intro if its 'Skip if' condition is True
-    voice_task_intro.skipped = continueRoutine and not (debug)
-    continueRoutine = voice_task_intro.skipped
     # keep track of which components have finished
     voice_task_introComponents = voice_task_intro.components
     for thisComponent in voice_task_intro.components:
@@ -1842,7 +1945,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     trials_2 = data.TrialHandler2(
         name='trials_2',
         nReps=1.0, 
-        method='random', 
+        method='sequential', 
         extraInfo=expInfo, 
         originPath=-1, 
         trialList=data.importConditions('conditions/vt_cond_file.csv'), 
@@ -2006,7 +2109,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         # Run 'Begin Routine' code from code_3
         respKey = None
-        respCorrect = None
+        vt_respCorrect = None
         
         vt_sound.setSound(vt_soundfile, hamming=True)
         vt_sound.setVolume(1.0, log=False)
@@ -2170,14 +2273,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if vt_key.keys:  # participant pressed a key
             respKey = vt_key.keys[0]  # first key pressed
             if (respKey == 'z' and vt_type == 'old') or (respKey == 'm' and vt_type == 'new'):
-                respCorrect = 1
+                vt_respCorrect = 1
             else:
-                respCorrect = 0
+                vt_respCorrect = 0
         
         # Update counters
-        totalTrials += 1
-        if respCorrect == 1:
-            totalCorrect += 1
+        vt_totalTrials += 1
+        if vt_respCorrect == 1:
+            vt_totalCorrect += 1
         vt_sound.pause()  # ensure sound has stopped at end of Routine
         # check responses
         if vt_key.keys in ['', [], None]:  # No response was made
@@ -2207,8 +2310,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # update component parameters for each repeat
     # Run 'Begin Routine' code from code_4
     
-    accuracy_percent = (totalCorrect / totalTrials) * 100
-    vf_text.text = f"Your accuracy for the faces was {accuracy_percent:.1f}%\nAs an indication, the general population accuracy for this type of sound is 78.8 %\n\nClick 'Next' to continue"
+    accuracy_percent = (vt_totalCorrect / vt_totalTrials) * 100
+    vf_text.text = f"Your accuracy for the voices was {accuracy_percent:.1f}%\nAs an indication, the general population accuracy for this type of sound is 78.8 %\n\nClick 'Next' to continue"
     # reset vf_btn to account for continued clicks & clear times on/off
     vf_btn.reset()
     # store start times for voice_feedback
@@ -2367,16 +2470,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if thisTrial_3 != None:
         for paramName in thisTrial_3:
             globals()[paramName] = thisTrial_3[paramName]
-    if thisSession is not None:
-        # if running in a Session with a Liaison client, send data up to now
-        thisSession.sendExperimentData()
     
     for thisTrial_3 in trials_3:
         currentLoop = trials_3
         thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
-        if thisSession is not None:
-            # if running in a Session with a Liaison client, send data up to now
-            thisSession.sendExperimentData()
         # abbreviate parameter names if possible (e.g. rgb = thisTrial_3.rgb)
         if thisTrial_3 != None:
             for paramName in thisTrial_3:
@@ -2528,6 +2625,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # *bm_sound_1* updates
             
+            # if bm_sound_1 is starting this frame...
+            if bm_sound_1.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                bm_sound_1.frameNStart = frameN  # exact frame index
+                bm_sound_1.tStart = t  # local t and not account for scr refresh
+                bm_sound_1.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('bm_sound_1.started', tThisFlipGlobal)
+                # update status
+                bm_sound_1.status = STARTED
+                bm_sound_1.play(when=win)  # sync with win flip
+            
             # if bm_sound_1 is stopping this frame...
             if bm_sound_1.status == STARTED:
                 if bool(False) or bm_sound_1.isFinished:
@@ -2542,6 +2651,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     bm_sound_1.stop()
             
             # *bm_sound_2* updates
+            
+            # if bm_sound_2 is starting this frame...
+            if bm_sound_2.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                bm_sound_2.frameNStart = frameN  # exact frame index
+                bm_sound_2.tStart = t  # local t and not account for scr refresh
+                bm_sound_2.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('bm_sound_2.started', tThisFlipGlobal)
+                # update status
+                bm_sound_2.status = STARTED
+                bm_sound_2.play(when=win)  # sync with win flip
             
             # if bm_sound_2 is stopping this frame...
             if bm_sound_2.status == STARTED:
@@ -2558,6 +2679,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # *bm_sound_3* updates
             
+            # if bm_sound_3 is starting this frame...
+            if bm_sound_3.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                bm_sound_3.frameNStart = frameN  # exact frame index
+                bm_sound_3.tStart = t  # local t and not account for scr refresh
+                bm_sound_3.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('bm_sound_3.started', tThisFlipGlobal)
+                # update status
+                bm_sound_3.status = STARTED
+                bm_sound_3.play(when=win)  # sync with win flip
+            
             # if bm_sound_3 is stopping this frame...
             if bm_sound_3.status == STARTED:
                 if bool(False) or bm_sound_3.isFinished:
@@ -2572,6 +2705,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     bm_sound_3.stop()
             
             # *bm_sound_4* updates
+            
+            # if bm_sound_4 is starting this frame...
+            if bm_sound_4.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                bm_sound_4.frameNStart = frameN  # exact frame index
+                bm_sound_4.tStart = t  # local t and not account for scr refresh
+                bm_sound_4.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('bm_sound_4.started', tThisFlipGlobal)
+                # update status
+                bm_sound_4.status = STARTED
+                bm_sound_4.play(when=win)  # sync with win flip
             
             # if bm_sound_4 is stopping this frame...
             if bm_sound_4.status == STARTED:
@@ -2588,6 +2733,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # *bm_sound_5* updates
             
+            # if bm_sound_5 is starting this frame...
+            if bm_sound_5.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                bm_sound_5.frameNStart = frameN  # exact frame index
+                bm_sound_5.tStart = t  # local t and not account for scr refresh
+                bm_sound_5.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('bm_sound_5.started', tThisFlipGlobal)
+                # update status
+                bm_sound_5.status = STARTED
+                bm_sound_5.play(when=win)  # sync with win flip
+            
             # if bm_sound_5 is stopping this frame...
             if bm_sound_5.status == STARTED:
                 if bool(False) or bm_sound_5.isFinished:
@@ -2602,6 +2759,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     bm_sound_5.stop()
             
             # *bm_sound_6* updates
+            
+            # if bm_sound_6 is starting this frame...
+            if bm_sound_6.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                bm_sound_6.frameNStart = frameN  # exact frame index
+                bm_sound_6.tStart = t  # local t and not account for scr refresh
+                bm_sound_6.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('bm_sound_6.started', tThisFlipGlobal)
+                # update status
+                bm_sound_6.status = STARTED
+                bm_sound_6.play(when=win)  # sync with win flip
             
             # if bm_sound_6 is stopping this frame...
             if bm_sound_6.status == STARTED:
@@ -2618,6 +2787,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # *bm_sound_7* updates
             
+            # if bm_sound_7 is starting this frame...
+            if bm_sound_7.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                bm_sound_7.frameNStart = frameN  # exact frame index
+                bm_sound_7.tStart = t  # local t and not account for scr refresh
+                bm_sound_7.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('bm_sound_7.started', tThisFlipGlobal)
+                # update status
+                bm_sound_7.status = STARTED
+                bm_sound_7.play(when=win)  # sync with win flip
+            
             # if bm_sound_7 is stopping this frame...
             if bm_sound_7.status == STARTED:
                 if bool(False) or bm_sound_7.isFinished:
@@ -2632,6 +2813,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     bm_sound_7.stop()
             
             # *bm_sound_8* updates
+            
+            # if bm_sound_8 is starting this frame...
+            if bm_sound_8.status == NOT_STARTED and neverPlay:
+                # keep track of start time/frame for later
+                bm_sound_8.frameNStart = frameN  # exact frame index
+                bm_sound_8.tStart = t  # local t and not account for scr refresh
+                bm_sound_8.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('bm_sound_8.started', tThisFlipGlobal)
+                # update status
+                bm_sound_8.status = STARTED
+                bm_sound_8.play(when=win)  # sync with win flip
             
             # if bm_sound_8 is stopping this frame...
             if bm_sound_8.status == STARTED:
@@ -2702,13 +2895,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         bm_sound_8.pause()  # ensure sound has stopped at end of Routine
         # the Routine "bells_memorisation" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
-        thisExp.nextEntry()
-        
     # completed 1.0 repeats of 'trials_3'
     
-    if thisSession is not None:
-        # if running in a Session with a Liaison client, send data up to now
-        thisSession.sendExperimentData()
     
     # --- Prepare to start Routine "bells_task_intro" ---
     # create an object to store info about Routine bells_task_intro
@@ -2862,7 +3050,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     trials_4 = data.TrialHandler2(
         name='trials_4',
         nReps=1.0, 
-        method='random', 
+        method='sequential', 
         extraInfo=expInfo, 
         originPath=-1, 
         trialList=data.importConditions('conditions/bt_cond_file.csv'), 
@@ -3023,7 +3211,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         # Run 'Begin Routine' code from code_6
         respKey = None
-        respCorrect = None
+        bt_respCorrect = None
         
         bt_sound.setSound(bt_soundfile, hamming=True)
         bt_sound.setVolume(1.0, log=False)
@@ -3184,14 +3372,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if bt_key.keys:  # participant pressed a key
             respKey = bt_key.keys[0]  # first key pressed
             if (respKey == 'z' and bt_type == 'old') or (respKey == 'm' and bt_type == 'new'):
-                respCorrect = 1
+                bt_respCorrect = 1
             else:
-                respCorrect = 0
+                bt_respCorrect = 0
         
         # Update counters
-        totalTrials += 1
-        if respCorrect == 1:
-            totalCorrect += 1
+        bt_totalTrials += 1
+        if bt_respCorrect == 1:
+            bt_totalCorrect += 1
         bt_sound.pause()  # ensure sound has stopped at end of Routine
         # check responses
         if bt_key.keys in ['', [], None]:  # No response was made
@@ -3221,8 +3409,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # update component parameters for each repeat
     # Run 'Begin Routine' code from code_7
     
-    accuracy_percent = (totalCorrect / totalTrials) * 100
-    bf_text.text = f"Your accuracy for the bells was {accuracy_percent:.1f}%\nAs an indication, the general population accuracy for this type of sound is 78.8 %\n\nClick 'Next' to continue"
+    accuracy_percent = (bt_totalCorrect / bt_totalTrials) * 100
+    bf_text.text = f"Your accuracy for the bells was {accuracy_percent:.1f}%\nAs an indication, the general population accuracy for this type of sound is 85.6 %\n\nClick 'Next' to continue"
     # reset bf_btn to account for continued clicks & clear times on/off
     bf_btn.reset()
     # store start times for bells_feedback

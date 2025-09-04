@@ -7,4 +7,4 @@ Aglieri, V., Watson, R., Pernet, C. et al. The Glasgow Voice Memory Test: Assess
 
 The official [online experiment](https://jatos.mindprobe.eu/publix/916/start?batchId=1038&generalMultiple) runs `Glasgow_Voice_Memory_Test.osexp`
 
-PsychoPy/PsychoJS version created by Matthew Ivory
+Translated into PsychoPy/PsychoJS by Matthew Ivory (matthew.ivory@lancaster.ac.uk)

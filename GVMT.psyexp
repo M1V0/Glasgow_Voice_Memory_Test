@@ -14,7 +14,7 @@
     <Param val="" valType="str" updates="None" name="HTML path"/>
     <Param val="" valType="str" updates="None" name="Incomplete URL"/>
     <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
-    <Param val="[]" valType="list" updates="None" name="Resources"/>
+    <Param val="['Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_New_ID01.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_New_ID02.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_New_ID03.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_New_ID04.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_New_ID05.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_New_ID06.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_New_ID07.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_New_ID08.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID01.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID02.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID03.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID04.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID05.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID06.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID07.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID08.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/FemaleAverage.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID01.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID02.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID03.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID04.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID05.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID06.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID07.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID08.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID01.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID02.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID03.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID04.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID05.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID06.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID07.wav', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID08.wav', 'conditions/bm_cond_file.csv', 'conditions/bt_cond_file.csv', 'conditions/vm_cond_file.csv', 'conditions/vt_cond_file.csv']" valType="list" updates="None" name="Resources"/>
     <Param val="False" valType="bool" updates="None" name="Save csv file"/>
     <Param val="False" valType="bool" updates="None" name="Save excel file"/>
     <Param val="False" valType="bool" updates="None" name="Save hdf5 file"/>
@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="1" valType="code" updates="None" name="runMode"/>
+    <Param val="0" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -163,8 +163,8 @@
       <CodeComponent name="code_8" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="debug = False" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="debug = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="debug = False&amp;#10;neverPlay = False" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="debug = false;&amp;#10;neverPlay = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
@@ -195,6 +195,23 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
+      <CodeComponent name="code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="st_play_once = false;&amp;#10;st_soundPlaying = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="st_play_once = False&amp;#10;st_soundPlaying = False&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Both" valType="str" updates="None" name="Code Type"/>
+        <Param val="if st_play_btn.wasClicked and not st_soundPlaying:&amp;#10;    st_sound.play()&amp;#10;    st_soundPlaying = True&amp;#10;    st_playStart = t&amp;#10;&amp;#10;if st_soundPlaying:&amp;#10;    if t - st_playStart &gt;= st_sound.getDuration():&amp;#10;        st_soundPlaying = False" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="// Check for button click only if sound not already playing&amp;#10;if (st_play_btn.isClicked &amp;&amp; !st_soundPlaying) {&amp;#10;    st_sound.play();&amp;#10;    st_soundPlaying = true;&amp;#10;    st_playStart = t;&amp;#10;}&amp;#10;&amp;#10;// Monitor playback duration&amp;#10;if (st_soundPlaying) {&amp;#10;    if ((t - st_playStart) &gt;= st_sound.getDuration()) {&amp;#10;        st_soundPlaying = false;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <TextComponent name="st_text" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -304,31 +321,14 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/FemaleAverage.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
         <Param val="1" valType="num" updates="constant" name="volume"/>
       </SoundComponent>
-      <CodeComponent name="code" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="st_play_once = false;&amp;#10;st_soundPlaying = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="st_play_once = False&amp;#10;st_soundPlaying = False&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="if st_play_btn.wasClicked and not st_soundPlaying:&amp;#10;    st_sound.play()&amp;#10;    st_soundPlaying = True&amp;#10;    st_playStart = t&amp;#10;&amp;#10;if st_soundPlaying:&amp;#10;    if t - st_playStart &gt;= st_sound.getDuration():&amp;#10;        st_soundPlaying = False" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="if ((st_play_btn.wasClicked &amp;&amp; (! st_soundPlaying))) {&amp;#10;    st_sound.play();&amp;#10;    st_soundPlaying = true;&amp;#10;    st_playStart = t;&amp;#10;}&amp;#10;if (st_soundPlaying) {&amp;#10;    if (((t - st_playStart) &gt;= st_sound.getDuration())) {&amp;#10;        st_soundPlaying = false;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code" valType="code" updates="None" name="name"/>
-      </CodeComponent>
     </Routine>
     <Routine name="voice_task">
       <RoutineSettingsComponent name="voice_task" plugin="None">
@@ -377,17 +377,17 @@
       <CodeComponent name="code_3" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# Initialize counters&amp;#10;totalTrials = 0&amp;#10;totalCorrect = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="totalTrials = 0;&amp;#10;totalCorrect = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="respKey = null;&amp;#10;respCorrect = null;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="respKey = None&amp;#10;respCorrect = None&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="# Initialize counters&amp;#10;vt_totalTrials = 0&amp;#10;vt_totalCorrect = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="vt_totalTrials = 0;&amp;#10;vt_totalCorrect = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="respKey = null;&amp;#10;vt_respCorrect = null;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="respKey = None&amp;#10;vt_respCorrect = None&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="if (vt_key.keys) {&amp;#10;    respKey = vt_key.keys[0];&amp;#10;    if ((((respKey === &quot;z&quot;) &amp;&amp; (vt_type === &quot;old&quot;)) || ((respKey === &quot;m&quot;) &amp;&amp; (vt_type === &quot;new&quot;)))) {&amp;#10;        respCorrect = 1;&amp;#10;    } else {&amp;#10;        respCorrect = 0;&amp;#10;    }&amp;#10;}&amp;#10;totalTrials += 1;&amp;#10;if ((respCorrect === 1)) {&amp;#10;    totalCorrect += 1;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="# Check response from Keyboard component&amp;#10;if vt_key.keys:  # participant pressed a key&amp;#10;    respKey = vt_key.keys[0]  # first key pressed&amp;#10;    if (respKey == 'z' and vt_type == 'old') or (respKey == 'm' and vt_type == 'new'):&amp;#10;        respCorrect = 1&amp;#10;    else:&amp;#10;        respCorrect = 0&amp;#10;&amp;#10;# Update counters&amp;#10;totalTrials += 1&amp;#10;if respCorrect == 1:&amp;#10;    totalCorrect += 1" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="if (vt_key.keys) {&amp;#10;    respKey = vt_key.keys[0];&amp;#10;    if ((((respKey === &quot;z&quot;) &amp;&amp; (vt_type === &quot;old&quot;)) || ((respKey === &quot;m&quot;) &amp;&amp; (vt_type === &quot;new&quot;)))) {&amp;#10;        vt_respCorrect = 1;&amp;#10;    } else {&amp;#10;        vt_respCorrect = 0;&amp;#10;    }&amp;#10;}&amp;#10;vt_totalTrials += 1;&amp;#10;if ((vt_respCorrect === 1)) {&amp;#10;    vt_totalCorrect += 1;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# Check response from Keyboard component&amp;#10;if vt_key.keys:  # participant pressed a key&amp;#10;    respKey = vt_key.keys[0]  # first key pressed&amp;#10;    if (respKey == 'z' and vt_type == 'old') or (respKey == 'm' and vt_type == 'new'):&amp;#10;        vt_respCorrect = 1&amp;#10;    else:&amp;#10;        vt_respCorrect = 0&amp;#10;&amp;#10;# Update counters&amp;#10;vt_totalTrials += 1&amp;#10;if vt_respCorrect == 1:&amp;#10;    vt_totalCorrect += 1" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code_3" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -479,8 +479,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="accuracy_percent = ((totalCorrect / totalTrials) * 100);&amp;#10;vf_text.text = `Your accuracy for the faces was ${util.pad(Number.parseFloat(accuracy_percent).toFixed(1), 1)}%&amp;#10;As an indication, the general population accuracy for this type of sound is 78.8 %&amp;#10;&amp;#10;Click 'Next' to continue`&amp;#10;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="&amp;#10;accuracy_percent = (totalCorrect / totalTrials) * 100&amp;#10;vf_text.text = f&quot;Your accuracy for the faces was {accuracy_percent:.1f}%\nAs an indication, the general population accuracy for this type of sound is 78.8 %\n\nClick 'Next' to continue&quot;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="accuracy_percent = ((vt_totalCorrect / vt_totalTrials) * 100);&amp;#10;vf_text.text = `Your accuracy for the voices was ${util.pad(Number.parseFloat(accuracy_percent).toFixed(1), 1)}%&amp;#10;As an indication, the general population accuracy for this type of sound is 78.8 %&amp;#10;&amp;#10;Click 'Next' to continue`&amp;#10;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="&amp;#10;accuracy_percent = (vt_totalCorrect / vt_totalTrials) * 100&amp;#10;vf_text.text = f&quot;Your accuracy for the voices was {accuracy_percent:.1f}%\nAs an indication, the general population accuracy for this type of sound is 78.8 %\n\nClick 'Next' to continue&quot;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -595,8 +595,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="accuracy_percent = ((totalCorrect / totalTrials) * 100);&amp;#10;bf_text.text = `Your accuracy for the bells was ${util.pad(Number.parseFloat(accuracy_percent).toFixed(1), 1)}%&amp;#10;As an indication, the general population accuracy for this type of sound is 78.8 %&amp;#10;&amp;#10;Click 'Next' to continue`&amp;#10;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="&amp;#10;accuracy_percent = (totalCorrect / totalTrials) * 100&amp;#10;bf_text.text = f&quot;Your accuracy for the bells was {accuracy_percent:.1f}%\nAs an indication, the general population accuracy for this type of sound is 78.8 %\n\nClick 'Next' to continue&quot;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="accuracy_percent = ((bt_totalCorrect / bt_totalTrials) * 100);&amp;#10;bf_text.text = `Your accuracy for the bells was ${util.pad(Number.parseFloat(accuracy_percent).toFixed(1), 1)}%&amp;#10;As an indication, the general population accuracy for this type of sound is 85.6 %&amp;#10;&amp;#10;Click 'Next' to continue`&amp;#10;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="&amp;#10;accuracy_percent = (bt_totalCorrect / bt_totalTrials) * 100&amp;#10;bf_text.text = f&quot;Your accuracy for the bells was {accuracy_percent:.1f}%\nAs an indication, the general population accuracy for this type of sound is 85.6 %\n\nClick 'Next' to continue&quot;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -737,7 +737,7 @@
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="voice_memorisation" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="debug" valType="code" updates="constant" name="skipIf"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
@@ -774,11 +774,11 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="vm_text.text = vm_text_content;&amp;#10;vm_btn.text = vm_btn_content;&amp;#10;if ((auto_proceed === 1)) {&amp;#10;    vm_text.draw();&amp;#10;    psychoJS.window.flip();&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;if ((vm_playSound === 1)) {&amp;#10;    for (var snd, _pj_c = 0, _pj_a = [vm_sound_1, vm_sound_2, vm_sound_3, vm_sound_4, vm_sound_5, vm_sound_6, vm_sound_7, vm_sound_8], _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        snd = _pj_a[_pj_c];&amp;#10;        for (var _, _pj_f = 0, _pj_d = util.range(3), _pj_e = _pj_d.length; (_pj_f &lt; _pj_e); _pj_f += 1) {&amp;#10;            _ = _pj_d[_pj_f];&amp;#10;            snd.play();&amp;#10;            core.wait((snd.getDuration() + 0.1));&amp;#10;        }&amp;#10;    }&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="vm_text.setText(vm_text_content);&amp;#10;&amp;#10;sounds = [vm_sound_1, vm_sound_2, vm_sound_3, vm_sound_4, vm_sound_5, vm_sound_6, vm_sound_7, vm_sound_8];&amp;#10;currentSoundIndex = 0;&amp;#10;playCount = 0;&amp;#10;isPlaying = false;&amp;#10;nextPlayTime = 0;&amp;#10;labelSet = false;  // flag to track whether we've updated the button text&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="vm_text.text = vm_text_content&amp;#10;vm_btn.text = vm_btn_content&amp;#10;&amp;#10;if auto_proceed == 1:&amp;#10;    vm_text.draw()&amp;#10;    win.flip()&amp;#10;    continueRoutine = False&amp;#10;&amp;#10;if vm_playSound == 1:&amp;#10;    for snd in [vm_sound_1, vm_sound_2, vm_sound_3, vm_sound_4,&amp;#10;                vm_sound_5, vm_sound_6, vm_sound_7, vm_sound_8]:&amp;#10;        for _ in range(3):&amp;#10;            snd.play()&amp;#10;            core.wait(snd.getDuration() + 0.1)&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="if (auto_proceed === 1) {&amp;#10;    continueRoutine = false;&amp;#10;    }&amp;#10;&amp;#10;if (!labelSet) {&amp;#10;    vm_btn.text = vm_btn_content;   // update ButtonStim text&amp;#10;    vm_btn.setAutoDraw(true);        // make sure it's visible&amp;#10;    labelSet = true;                 // prevent re-running every frame&amp;#10;}&amp;#10;&amp;#10;if (vm_playSound) {&amp;#10;    vm_btn.setAutoDraw(false);  // stop drawing &amp; interaction&amp;#10;} else {&amp;#10;    vm_btn.setAutoDraw(true);   // show &amp; clickable&amp;#10;}&amp;#10;&amp;#10;if (vm_playSound &amp;&amp; currentSoundIndex &lt; sounds.length) {&amp;#10;    let snd = sounds[currentSoundIndex];&amp;#10;&amp;#10;    if (!isPlaying &amp;&amp; t &gt;= nextPlayTime) {&amp;#10;        snd.play();&amp;#10;        isPlaying = true;&amp;#10;        soundStart = t;  // mark when it started&amp;#10;    }&amp;#10;&amp;#10;    if (isPlaying) {&amp;#10;        let elapsed = t - soundStart;&amp;#10;        if (elapsed &gt;= snd.getDuration()) {&amp;#10;            playCount += 1;&amp;#10;            isPlaying = false;&amp;#10;            nextPlayTime = t + 0.1;  // add buffer&amp;#10;            if (currentSoundIndex === 0) {&amp;#10;                if (playCount &gt;= 4) {&amp;#10;                    playCount = 0;&amp;#10;                    currentSoundIndex += 1;&amp;#10;                }&amp;#10;            }&amp;#10;            if (currentSoundIndex &gt; 0) {&amp;#10;                if (playCount &gt;= 3) {&amp;#10;                    playCount = 0;&amp;#10;                    currentSoundIndex += 1;&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;&amp;#10;    if (currentSoundIndex &gt;= sounds.length) {&amp;#10;        continueRoutine = false;&amp;#10;    }&amp;#10;}" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -817,7 +817,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="str" updates="constant" name="text"/>
+        <Param val="placeholder" valType="str" updates="constant" name="text"/>
         <Param val="button onset" valType="str" updates="constant" name="timeRelativeTo"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
@@ -832,8 +832,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID01.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -850,8 +850,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID02.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -868,8 +868,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID03.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -886,8 +886,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID04.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -904,8 +904,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID05.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -922,8 +922,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID06.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -940,8 +940,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID07.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -958,8 +958,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID08.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -979,7 +979,7 @@
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="voice_task_intro" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="debug" valType="code" updates="constant" name="skipIf"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
@@ -994,7 +994,7 @@
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="0.045" valType="num" updates="constant" name="letterHeight"/>
         <Param val="vti_text" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
@@ -1142,11 +1142,11 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="bm_text.text = bm_text_content;&amp;#10;bm_btn.text = bm_btn_content;&amp;#10;bm_text.text = bm_text_content;&amp;#10;bm_btn.text = bm_btn_content;&amp;#10;if ((bm_auto_proceed === 1)) {&amp;#10;    bm_text.draw();&amp;#10;    psychoJS.window.flip();&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;if ((bm_playSound === 1)) {&amp;#10;    for (var snd, _pj_c = 0, _pj_a = [bm_sound_1, bm_sound_2, bm_sound_3, bm_sound_4, bm_sound_5, bm_sound_6, bm_sound_7, bm_sound_8], _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        snd = _pj_a[_pj_c];&amp;#10;        for (var _, _pj_f = 0, _pj_d = util.range(3), _pj_e = _pj_d.length; (_pj_f &lt; _pj_e); _pj_f += 1) {&amp;#10;            _ = _pj_d[_pj_f];&amp;#10;            snd.play();&amp;#10;            core.wait((snd.getDuration() + 0.1));&amp;#10;        }&amp;#10;    }&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="bm_text.setText(bm_text_content);&amp;#10;&amp;#10;sounds = [bm_sound_1, bm_sound_2, bm_sound_3, bm_sound_4, bm_sound_5, bm_sound_6, bm_sound_7, bm_sound_8];&amp;#10;currentSoundIndex = 0;&amp;#10;playCount = 0;&amp;#10;isPlaying = false;&amp;#10;nextPlayTime = 0;&amp;#10;labelSet = false;  // flag to track whether we've updated the button text&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="bm_text.text = bm_text_content&amp;#10;bm_btn.text = bm_btn_content&amp;#10;&amp;#10;bm_text.text = bm_text_content&amp;#10;bm_btn.text = bm_btn_content&amp;#10;&amp;#10;if bm_auto_proceed == 1:&amp;#10;    bm_text.draw()&amp;#10;    win.flip()&amp;#10;    continueRoutine = False&amp;#10;&amp;#10;if bm_playSound == 1:&amp;#10;    for snd in [bm_sound_1, bm_sound_2, bm_sound_3, bm_sound_4,&amp;#10;                bm_sound_5, bm_sound_6, bm_sound_7, bm_sound_8]:&amp;#10;     for _ in range(3):&amp;#10;            snd.play()&amp;#10;            core.wait(snd.getDuration() + 0.1)&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="if (bm_auto_proceed === 1) {&amp;#10;    continueRoutine = false;&amp;#10;    }&amp;#10;&amp;#10;if (!labelSet) {&amp;#10;    bm_btn.text = bm_btn_content;   // update ButtonStim text&amp;#10;    bm_btn.setAutoDraw(true);        // make sure it's visible&amp;#10;    labelSet = true;                 // prevent re-running every frame&amp;#10;}&amp;#10;&amp;#10;if (bm_playSound) {&amp;#10;    bm_btn.setAutoDraw(false);  // stop drawing &amp; interaction&amp;#10;} else {&amp;#10;    bm_btn.setAutoDraw(true);   // show &amp; clickable&amp;#10;}&amp;#10;&amp;#10;if (bm_playSound &amp;&amp; currentSoundIndex &lt; sounds.length) {&amp;#10;    let snd = sounds[currentSoundIndex];&amp;#10;&amp;#10;    if (!isPlaying &amp;&amp; t &gt;= nextPlayTime) {&amp;#10;        snd.play();&amp;#10;        isPlaying = true;&amp;#10;        soundStart = t;  // mark when it started&amp;#10;    }&amp;#10;&amp;#10;    if (isPlaying) {&amp;#10;        let elapsed = t - soundStart;&amp;#10;        if (elapsed &gt;= snd.getDuration()) {&amp;#10;            playCount += 1;&amp;#10;            isPlaying = false;&amp;#10;            nextPlayTime = t + 0.1;  // add buffer&amp;#10;            if (currentSoundIndex === 0) {&amp;#10;                if (playCount &gt;= 4) {&amp;#10;                    playCount = 0;&amp;#10;                    currentSoundIndex += 1;&amp;#10;                }&amp;#10;            }&amp;#10;            if (currentSoundIndex &gt; 0) {&amp;#10;                if (playCount &gt;= 3) {&amp;#10;                    playCount = 0;&amp;#10;                    currentSoundIndex += 1;&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;&amp;#10;    if (currentSoundIndex &gt;= sounds.length) {&amp;#10;        continueRoutine = false;&amp;#10;    }&amp;#10;}" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -1185,7 +1185,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="str" updates="constant" name="text"/>
+        <Param val=" " valType="str" updates="constant" name="text"/>
         <Param val="button onset" valType="str" updates="constant" name="timeRelativeTo"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
@@ -1200,8 +1200,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID01.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -1218,8 +1218,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID02.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -1236,8 +1236,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID03.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -1254,8 +1254,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID04.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -1272,8 +1272,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID05.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -1290,8 +1290,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID06.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -1308,8 +1308,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID07.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -1326,8 +1326,8 @@
         <Param val="Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Bell_Old_ID08.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="neverPlay" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -1362,7 +1362,7 @@
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="0.045" valType="num" updates="constant" name="letterHeight"/>
         <Param val="bti_text" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
@@ -1508,17 +1508,17 @@
       <CodeComponent name="code_6" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# Initialize counters&amp;#10;totalTrials = 0&amp;#10;totalCorrect = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="totalTrials = 0;&amp;#10;totalCorrect = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="respKey = null;&amp;#10;respCorrect = null;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="respKey = None&amp;#10;respCorrect = None&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="# Initialize counters&amp;#10;bt_totalTrials = 0&amp;#10;bt_totalCorrect = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="bt_totalTrials = 0;&amp;#10;bt_totalCorrect = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="respKey = null;&amp;#10;bt_respCorrect = null;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="respKey = None&amp;#10;bt_respCorrect = None&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="if (bt_key.keys) {&amp;#10;    respKey = bt_key.keys[0];&amp;#10;    if ((((respKey === &quot;z&quot;) &amp;&amp; (bt_type === &quot;old&quot;)) || ((respKey === &quot;m&quot;) &amp;&amp; (bt_type === &quot;new&quot;)))) {&amp;#10;        respCorrect = 1;&amp;#10;    } else {&amp;#10;        respCorrect = 0;&amp;#10;    }&amp;#10;}&amp;#10;totalTrials += 1;&amp;#10;if ((respCorrect === 1)) {&amp;#10;    totalCorrect += 1;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="# Check response from Keyboard component&amp;#10;if bt_key.keys:  # participant pressed a key&amp;#10;    respKey = bt_key.keys[0]  # first key pressed&amp;#10;    if (respKey == 'z' and bt_type == 'old') or (respKey == 'm' and bt_type == 'new'):&amp;#10;        respCorrect = 1&amp;#10;    else:&amp;#10;        respCorrect = 0&amp;#10;&amp;#10;# Update counters&amp;#10;totalTrials += 1&amp;#10;if respCorrect == 1:&amp;#10;    totalCorrect += 1" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="if (bt_key.keys) {&amp;#10;    respKey = bt_key.keys[0];&amp;#10;    if ((((respKey === &quot;z&quot;) &amp;&amp; (bt_type === &quot;old&quot;)) || ((respKey === &quot;m&quot;) &amp;&amp; (bt_type === &quot;new&quot;)))) {&amp;#10;        bt_respCorrect = 1;&amp;#10;    } else {&amp;#10;        bt_respCorrect = 0;&amp;#10;    }&amp;#10;}&amp;#10;bt_totalTrials += 1;&amp;#10;if ((bt_respCorrect === 1)) {&amp;#10;    bt_totalCorrect += 1;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# Check response from Keyboard component&amp;#10;if bt_key.keys:  # participant pressed a key&amp;#10;    respKey = bt_key.keys[0]  # first key pressed&amp;#10;    if (respKey == 'z' and bt_type == 'old') or (respKey == 'm' and bt_type == 'new'):&amp;#10;        bt_respCorrect = 1&amp;#10;    else:&amp;#10;        bt_respCorrect = 0&amp;#10;&amp;#10;# Update counters&amp;#10;bt_totalTrials += 1&amp;#10;if bt_respCorrect == 1:&amp;#10;    bt_totalCorrect += 1" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code_6" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -1567,7 +1567,7 @@
     <Routine name="sound_test"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('vm_text_content', '&quot;Voice&quot; Memorization\n\nDuring the memorization phase, you will listen to &quot;Voice&quot; sounds.\n\nListen carefully because, during the test phase, you will be asked whether you heard those sounds or not.'), ('vm_btn_content', 'Start'), ('vm_playSound', 0), ('auto_proceed', 0)]), OrderedDict([('vm_text_content', 'Listen carefully to the sounds'), ('vm_btn_content', 'placeholder'), ('vm_playSound', 0), ('auto_proceed', 1)]), OrderedDict([('vm_text_content', 'Listen carefully to the sounds'), ('vm_btn_content', 'placeholder'), ('vm_playSound', 1), ('auto_proceed', 0)]), OrderedDict([('vm_text_content', &quot;End of memorization phase!\n\nClick 'Next' to continue&quot;), ('vm_btn_content', 'Next'), ('vm_playSound', 0), ('auto_proceed', 0)])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('vm_text_content', '&quot;Voice&quot; Memorization\n\nDuring the memorization phase, you will listen to &quot;Voice&quot; sounds.\n\nListen carefully because, during the test phase, you will be asked whether you heard those sounds or not.'), ('vm_btn_content', 'Start'), ('vm_playSound', 0), ('auto_proceed', 0)]), OrderedDict([('vm_text_content', 'Listen carefully to the sounds'), ('vm_btn_content', ' '), ('vm_playSound', 0), ('auto_proceed', 1)]), OrderedDict([('vm_text_content', 'Listen carefully to the sounds'), ('vm_btn_content', ' '), ('vm_playSound', 1), ('auto_proceed', 0)]), OrderedDict([('vm_text_content', &quot;End of memorization phase!\n\nClick 'Next' to continue&quot;), ('vm_btn_content', 'Next'), ('vm_playSound', 0), ('auto_proceed', 0)])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="conditions/vm_cond_file.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
@@ -1581,11 +1581,11 @@
     <Routine name="voice_task_intro"/>
     <LoopInitiator loopType="TrialHandler" name="trials_2">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID04.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID01.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID02.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID08.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID05.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID03.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID01.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID04.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID05.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID06.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID06.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID03.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID07.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID02.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID08.wav')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID07.wav')])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID04.wav'), ('vt_type', 'old')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID01.wav'), ('vt_type', 'new')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID02.wav'), ('vt_type', 'new')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID08.wav'), ('vt_type', 'old')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID05.wav'), ('vt_type', 'old')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID03.wav'), ('vt_type', 'new')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID01.wav'), ('vt_type', 'old')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID04.wav'), ('vt_type', 'new')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID05.wav'), ('vt_type', 'new')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID06.wav'), ('vt_type', 'new')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID06.wav'), ('vt_type', 'old')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID03.wav'), ('vt_type', 'old')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID07.wav'), ('vt_type', 'new')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID02.wav'), ('vt_type', 'old')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_New_ID08.wav'), ('vt_type', 'new')]), OrderedDict([('vt_soundfile', 'Sounds_Resampled-44100Hz_Normalized-100-percent-window_Adjusted-66150/Voice_Old_ID07.wav'), ('vt_type', 'old')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="conditions/vt_cond_file.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="num"/>
       <Param name="name" updates="None" val="trials_2" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
@@ -1596,10 +1596,10 @@
     <Routine name="voice_feedback"/>
     <LoopInitiator loopType="TrialHandler" name="trials_3">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('bm_text_content', '&quot;Bell&quot; Memorization\n\nDuring the memorization phase, you will listen to &quot;Bell&quot; sounds.\n\nListen carefully because, during the test phase, you will be asked whether you heard those sounds or not.'), ('bm_btn_content', 'Start'), ('bm_playSound', 0), ('bm_auto_proceed', 0)]), OrderedDict([('bm_text_content', 'Listen carefully to the sounds'), ('bm_btn_content', 'placeholder'), ('bm_playSound', 0), ('bm_auto_proceed', 1)]), OrderedDict([('bm_text_content', 'Listen carefully to the sounds'), ('bm_btn_content', 'placeholder'), ('bm_playSound', 1), ('bm_auto_proceed', 0)]), OrderedDict([('bm_text_content', &quot;End of memorization phase!\n\nClick 'Next' to continue&quot;), ('bm_btn_content', 'Next'), ('bm_playSound', 0), ('bm_auto_proceed', 0)])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('bm_text_content', '&quot;Bell&quot; Memorization\n\nDuring the memorization phase, you will listen to &quot;Bell&quot; sounds.\n\nListen carefully because, during the test phase, you will be asked whether you heard those sounds or not.'), ('bm_btn_content', 'Start'), ('bm_playSound', 0), ('bm_auto_proceed', 0)]), OrderedDict([('bm_text_content', 'Listen carefully to the sounds'), ('bm_btn_content', ' '), ('bm_playSound', 0), ('bm_auto_proceed', 1)]), OrderedDict([('bm_text_content', 'Listen carefully to the sounds'), ('bm_btn_content', ' '), ('bm_playSound', 1), ('bm_auto_proceed', 0)]), OrderedDict([('bm_text_content', &quot;End of memorization phase!\n\nClick 'Next' to continue&quot;), ('bm_btn_content', 'Next'), ('bm_playSound', 0), ('bm_auto_proceed', 0)])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="conditions/bm_cond_file.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="num"/>
       <Param name="name" updates="None" val="trials_3" valType="code"/>
@@ -1614,7 +1614,7 @@
       <Param name="conditionsFile" updates="None" val="conditions/bt_cond_file.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="num"/>
       <Param name="name" updates="None" val="trials_4" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>

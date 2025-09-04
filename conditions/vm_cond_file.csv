@@ -4,8 +4,8 @@
 During the memorization phase, you will listen to ""Voice"" sounds.
 
 Listen carefully because, during the test phase, you will be asked whether you heard those sounds or not.",Start,0,0
-Listen carefully to the sounds,placeholder,0,1
-Listen carefully to the sounds,placeholder,1,0
+Listen carefully to the sounds, ,0,1
+Listen carefully to the sounds, ,1,0
 "End of memorization phase!
 
 Click 'Next' to continue",Next,0,0

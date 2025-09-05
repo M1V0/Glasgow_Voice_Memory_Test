@@ -1333,8 +1333,6 @@ function trials_3LoopEndIteration(scheduler, snapshot) {
           psychoJS.experiment.nextEntry(snapshot);
         }
         scheduler.stop();
-      } else {
-        psychoJS.experiment.nextEntry(snapshot);
       }
     return Scheduler.Event.NEXT;
     }
@@ -2188,6 +2186,7 @@ function voice_feedbackRoutineBegin(snapshot) {
     // update component parameters for each repeat
     // Run 'Begin Routine' code from code_4
     accuracy_percent = ((vt_totalCorrect / vt_totalTrials) * 100);
+    psychoJS.experiment.addData("accuracy_voices", accuracy_percent);
     vf_text.text = `Your accuracy for the voices was ${util.pad(Number.parseFloat(accuracy_percent).toFixed(1), 1)}%
     As an indication, the general population accuracy for this type of sound is 78.8 %
     
@@ -3085,6 +3084,7 @@ function bells_feedbackRoutineBegin(snapshot) {
     // update component parameters for each repeat
     // Run 'Begin Routine' code from code_7
     accuracy_percent = ((bt_totalCorrect / bt_totalTrials) * 100);
+    psychoJS.experiment.addData("accuracy_bells", accuracy_percent);
     bf_text.text = `Your accuracy for the bells was ${util.pad(Number.parseFloat(accuracy_percent).toFixed(1), 1)}%
     As an indication, the general population accuracy for this type of sound is 85.6 %
     
